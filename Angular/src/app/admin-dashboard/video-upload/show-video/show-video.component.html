@@ -1,0 +1,36 @@
+<div>
+    <div class="text-container">
+        <h2 style="text-align: left;">Lecture Videos<button class="btn btn-info" [routerLink]="['/admin-dashboard/add-lectures']" routerLinkActive="router-link-active" style="float: right; margin-right: 100px;">Add Video</button>
+          <span><br><p class="underline"></p></span> </h2>
+    </div>
+  <div class="container">
+    <div class="video-container-div col-lg-8 col-md-10 col-sn-12 col-xs-12" *ngFor="let item of videos">
+      <div class="name">
+        <h6 style="color: #1c325f;">{{item.name}}</h6>
+        <hr>
+      </div>
+      <div class="video">
+        <!-- <video src="/Front-end/Lms-Front/src/assets/videos/Graphic Design.mp4" [loop]="true" height="400px"></video> -->
+        <video controls>
+          <source src="{{item.imagePath}}" type="video/mp4">
+            <!-- <source src="assets/videos/Graphic Design.mp4" type="video/mp4"> -->
+        </video>
+        <hr>
+      </div>
+      <div class="intro">
+        <p style="font-weight: bold;">Description:</p>
+        <p>
+          {{item.Introduction}}
+            <!-- The only course you need to learn to code and become a full-stack web developer. HTML, CSS, Javascript, Node and more ⭐️⭐️⭐️⭐️⭐️ -->
+        </p>
+      </div>
+    </div>
+
+    <!-- <mat-paginator
+    [length]="totalvideos"
+    [pageSize]="videosPerPage"
+    [pageSizeOptions]="pageSizeOptions"
+    (page)="onPageChanged($event)"
+    ></mat-paginator> -->
+  </div>
+</div>

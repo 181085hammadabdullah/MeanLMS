@@ -1,0 +1,9 @@
+h1{
+  font-size: 24px;
+  font-weight: 600;
+  text-align: left;
+}
+.underline{
+  border-top: 2px solid rgb(0, 25, 139);
+  width: 90%;
+}

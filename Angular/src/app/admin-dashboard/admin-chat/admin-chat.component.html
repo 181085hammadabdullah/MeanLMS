@@ -1,0 +1,75 @@
+<!-- <br><br>
+<div class="container">
+    <div class="row">
+<div class="chat col-lg-9 col-md-8 col-sm-8 col-xs-8 offset-lg-2">
+
+<div class="smsdiv" #scrollMe [scrollTop]="scrollMe.scrollHeight">
+
+    <div *ngFor="let sms of messageArray" id="sms1">
+      <div *ngIf="(sms.sender=='Admin'),else elseBlock" class="sender">
+          <div  class="alert alert-warning ml-4" role="alert" id="smsdiv">
+            <h6>{{sms.message}}</h6>
+          </div>
+      </div>
+
+      <ng-template #elseBlock>
+          <div class="ml-auto  row">
+              <div class="mr-4" role="alert"  class="receiver">
+                <div  id="fsmsdiv" class="alert ">
+                  <h6>{{sms.message}}</h6>
+                </div>
+              </div>
+          </div>
+      </ng-template>
+    </div>
+</div>
+
+    <div class="input-group">
+        <textarea  [(ngModel)]="message" name="message" class="form-control type_msg"
+          placeholder="Type your message..." id="smsbox"></textarea>
+        <button class="btn btn-danger b1" (click)="sendMessage()"><fa name="paper-plane" size="2x" class="send-icon"></fa></button>
+      </div>
+    </div>
+
+    </div>
+</div> -->
+
+
+<div class="chat-container">
+    <div>
+        <br>
+        <div class="row">
+          <div class="chat col-lg-6 col-md-6 col-sm-12 col-xs-12 offset-lg-2">
+              <div class="smsdiv" #scrollMe [scrollTop]="scrollMe.scrollHeight">
+                <div *ngFor="let sms of messageArray" id="sms1">
+                  <div *ngIf="(sms.sender=='Admin'),else elseBlock" class="sender">
+                    <div  class="alert alert-warning ml-4" role="alert" id="smsdiv">
+                        <img class="sender-img" src="assets/images/user1.jpg" alt="">
+                      <h6>{{sms.message}}</h6>
+                    </div>
+                  </div>
+                  <ng-template #elseBlock>
+                    <div class="ml-auto  row">
+                        <div class="mr-4" role="alert" class="receiver">
+                          <div  id="fsmsdiv" class="alert ">
+                              <img class="receiver-img" src="{{lastpics}}" alt="">
+                            <h6>{{sms.message}}</h6>
+                          </div>
+                        </div>
+                    </div>
+                  </ng-template>
+                </div>
+              </div>
+              <div class="input-group">
+                  <textarea  [(ngModel)]="message" name="message" class="form-control type_msg"
+                    placeholder="Type your message..." id="smsbox">
+                  </textarea>
+                  <button class="btn btn-danger b1" (click)="sendMessage()">
+                    <i class="fa fa-location-arrow fa-2x" style="color: blue"></i>
+                  </button>
+              </div>
+          </div>
+        </div>
+    </div>
+</div>
+

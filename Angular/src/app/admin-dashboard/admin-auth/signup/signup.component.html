@@ -1,0 +1,27 @@
+<div>
+
+  <div class="container">
+    <div class="text-container">
+
+    </div>
+  </div>
+
+  <div class="form-container">
+    <div class="form-card">
+        <h1>Admin SignUP Form</h1>
+        <p>Register a new Admin. Please Fill the details carefully.</p>
+      <div class="my-form">
+
+        <form [formGroup]="adminForm" novalidate (submit)="Singup()">
+          <!-- {{ this.stdForm.value | json }} -->
+          <input class="input" id="name" type="text" placeholder="Name" formControlName="name">
+          <input class="input" id="email" type="email" placeholder="Email" formControlName="email">
+          <input class="input" id="password" type="password" placeholder="Password" formControlName="password">
+
+          <button type="submit" class="btn btn-primary" [disabled]="!adminForm.valid">Register</button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>

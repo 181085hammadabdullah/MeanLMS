@@ -1,0 +1,82 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+@font-face {
+  font-family: 'poppin';
+  src: url(/assets/fonts/Poppins/Poppins-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: 'poppin-medium';
+  src: url(/assets/fonts/Poppins/Poppins-Medium.ttf) format("truetype");
+}
+body{
+  padding-top: 50px;
+  overflow-x: hidden;
+  overflow-y: initial
+}
+/* -----------Scroll Bar ---------------------- */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(113, 126, 133);
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(#03328f,  rgb(72, 165, 241), #03328f);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-image: linear-gradient(rgb(72, 165, 241), #183879);
+}
+
+/* --------------------Scroll Bar------------------------- */
+
+
+/* ============== Text Selected =============== */
+
+::-moz-selection { /* Code for Firefox */
+  color: #06286b;
+  background: #84e728;
+}
+
+::selection {
+  color: #06286b;
+  background: #84e728;
+  border: 1px solid #03328f;
+}
+
+/* ============== Text Selected =============== */
+h1{
+  font-family: 'poppin';
+  color: #183879;
+  font-size: 1rem;
+}
+h2{
+  font-family: 'poppin-medium';
+  color: #1c325f;
+  font-size: .5rem;
+}
+p{
+  font-family: 'poppin';
+  font-weight: lighter;
+  color: black;
+}
+button{
+  outline: none;
+}
+
+.BottomSheetCss{
+  width: 3px;
+  height: 500px;
+
+}

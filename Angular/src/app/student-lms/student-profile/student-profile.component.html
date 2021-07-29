@@ -1,0 +1,238 @@
+
+<div>
+  <div class="container-fluid">
+    <div class="col-lg-3 col-md-3 col-sm-10 col-xs-10 profile-container">
+
+
+          <form [formGroup]="picForm" novalidate (submit)="UpdatePic(picForm)">
+            <div class="profile-image">
+        <div class="preview" *ngIf="ImagePreview !== '' && ImagePreview ">
+          <img class="image" [src]="ImagePreview" alt="">
+        </div>
+        <div *ngIf="!ImagePreview">
+          <div class="has" >
+              <img class="image" src="{{lastpics}}" alt="">
+          </div>
+        </div>
+        <div class="when">
+          <img class="image" src="assets/images/user1.jpg" alt="">
+        </div>
+
+        <div class="edit-image"><a (click)="filepicker.click()">
+          <fa name="camera-retro" size="3x" style="color: #022b7e;"></fa>
+          <input type="file" #filepicker (change)="onImagePicked($event)">
+        </a>
+        </div>
+      </div>
+      <div *ngIf="ImagePreview !== '' && ImagePreview ">
+        <button class="upload btn btn-info" type="submit">Update Picture</button>
+      </div>
+          </form>
+
+
+      <div class="text-container" *ngFor="let std of student">
+        <h1>{{FirstName}} {{std.profile.Last_Name}}</h1>
+        <p style="color: black; font-size: 16px;">{{std.profile.City}}, {{std.profile.Country}}</p>
+        <p>Note: JPG file of Max. 150KB is required for Profile Picture</p>
+      </div>
+
+      <div class="profile-details">
+        <div class="detail" *ngFor="let std of student">
+          <h1><span><fa name="book"></fa></span> Education</h1>
+          <p>{{std.Acedmic.Qualification}} - {{std.Acedmic.Specialization}}</p>
+        </div>
+      </div>
+
+      <div class="profile-details">
+        <div class="detail">
+          <h1> <span><fa name="envelope"></fa></span> Email</h1>
+          <p>{{UserEmail}}</p>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-lg-7 col-md-7 col-sm-10 col-xs-10  profile-form-container">
+
+    <div class="profile-list">
+      <div class="student-profile">
+        <h4>Student Profile</h4> <span class="icon-edit">Edit Profile <fa name="edit" size="2x"></fa></span>
+      </div>
+      <div class="Basic-Info col-lg-5 col-md-5">
+        <h5>Basic Information :</h5>
+        <hr>
+        <table class=" table-hover ">
+          <tr *ngFor="let std of student">
+            <td><h6>First Name :</h6></td>
+            <td><p>{{std.profile.First_Name}}</p></td>
+          </tr>
+          <tr *ngFor="let std of student">
+            <td><h6>Last Name :</h6></td>
+            <td><p>{{std.profile.Last_Name}}</p></td>
+          </tr>
+          <tr *ngFor="let std of student">
+            <td><h6>Gender :</h6></td>
+            <td><p>{{std.profile.Gender}}</p></td>
+          </tr>
+          <tr *ngFor="let std of student">
+            <td><h6>Phone No :</h6></td>
+            <td><p>{{std.profile.Phone_No}}</p></td>
+          </tr>
+          <tr *ngFor="let std of student">
+            <td><h6>Address :</h6></td>
+            <td><p>{{std.profile.Address}}</p></td>
+          </tr>
+          <tr *ngFor="let std of student">
+            <td><h6>CNIC :</h6></td>
+            <td><p>{{std.profile.CNIC}}</p></td>
+          </tr>
+          <tr *ngFor="let std of student">
+            <td><h6>Country :</h6></td>
+            <td><p>{{std.profile.Country}}</p></td>
+          </tr>
+          <tr *ngFor="let std of student">
+            <td><h6>City :</h6></td>
+            <td><p>{{std.profile.City}}</p></td>
+          </tr>
+        </table>
+      </div>
+      <div class="Academic col-lg-6 col-md-6">
+          <h5>Academic Information :</h5>
+          <hr>
+          <table class=" table-hover ">
+              <tr *ngFor="let std of student">
+                <td><h6>Qualification :</h6></td>
+                <td><p>{{std.Acedmic.Qualification}}</p></td>
+              </tr>
+              <tr *ngFor="let std of student">
+                <td><h6>Specification :</h6></td>
+                <td><p>{{std.Acedmic.Specialization}}</p></td>
+              </tr>
+              <tr *ngFor="let std of student">
+                <td><h6>Current Status :</h6></td>
+                <td><p>{{std.Acedmic.Current_Status}}</p></td>
+              </tr>
+              <tr *ngFor="let std of student">
+                <td><h6>Future Plans :</h6></td>
+                <td><p>{{std.Acedmic.Future_Plan}}</p></td>
+              </tr>
+              <tr *ngFor="let std of student">
+                <td><h6>Know about us :</h6></td>
+                <td><p>{{std.Acedmic.Know}}</p></td>
+              </tr>
+
+            </table>
+
+
+
+
+
+        </div>
+    </div>
+      <div class="student-form-container">
+        <div class="student-form">
+
+          <!-- <form novalidate (submit)="UpdatePic(picForm)">
+              <p>Update Picture :</p>
+            <div>
+              <button class="btn btn-outline-success btn-edit" (click)="filepicker.click()">Add Image</button>
+              <input type="file" #filepicker (change)="onImagePicked($event)">
+            </div>
+            <div class="image-preview" *ngIf="ImagePreview !== '' && ImagePreview && picForm.get('image').valid">
+              <img [src]="ImagePreview" alt="Profile Picture">
+            </div>
+            <button type="submit" class="btn btn-primary done">Upload</button>
+          </form> -->
+
+
+          <form [formGroup]="profileForm" novalidate (submit)="UpdateProfile(profileForm)">
+
+            <p>Basic Information :</p>
+
+            <input class="input" id="fname" type="text" placeholder="First Name" formControlName="fname">
+            <input class="input" id="lname" type="text" placeholder="Last Name" formControlName="lname">
+
+            <div class="radio-container">
+                <h1>Gender :</h1>
+                <label class="radio-inline radio">
+                  <input type="radio" value="Male" name="gender" formControlName="gender">
+                  Male
+                </label>
+                <label class="radio-inline radio">
+                  <input type="radio" value="Female" name="gender" formControlName="gender">
+                  Female
+                </label>
+            </div>
+
+            <input class="input" id="phone" type="text" placeholder="Phone" formControlName="phoneno">
+            <input class="input" id="address" type="text" placeholder="Address" formControlName="address">
+            <input class="input" id="cnic" type="text" placeholder="CNIC" formControlName="cnic">
+
+            <select class="form-control" formControlName="country">
+              <option value="" selected="selected" hidden="hidden">Choose Country :</option>
+              <option  value="Pakistan">Pakistan</option>
+              <option  value="China">China</option>
+              <option  value="Iran">Iran</option>
+              <option  value="Russia">Russia</option>
+              <option  value="Austrailia">Austrailia</option>
+              <option  value="England">England</option>
+              <option  value="America">America</option>
+            </select>
+            <input class="input" id="phone" type="text" placeholder="City" formControlName="city">
+            <br>
+            <div class="acedamic-container">
+            <p>Academic Information :</p>
+            </div>
+
+            <select class="form-control" formControlName="Qualification">
+              <option value="" selected="selected" hidden="hidden">Highest Qualification :</option>
+              <option  value="Middle">Middle</option>
+              <option  value="Matric/O-Level">Matric/O-Level</option>
+              <option  value="Intermediate">Intermediate</option>
+              <option  value="Graduation">Graduation</option>
+              <option  value="Masters">Masters</option>
+              <option  value="Ms/M.Phil">Ms/M.Phil</option>
+              <option  value="Ph.D">Ph.D</option>
+            </select>
+
+            <input class="input" id="phone" type="text" placeholder="Specialization" formControlName="Specialization">
+
+            <select class="form-control" formControlName="Current_Status">
+              <option value="" selected="selected" hidden="hidden">Current Status :</option>
+              <option  value="Student">Student</option>
+              <option  value="Employed">Employed</option>
+              <option  value="Unemployed">Unemployed</option>
+              <option  value="Freelancer">Freelancer</option>
+              <option  value="Entrepreneur">Entrepreneur</option>
+              <option  value="Own Business">Own Business</option>
+              <option  value="House Wife">House Wife</option>
+            </select>
+
+            <select class="form-control" formControlName="Future_Plan">
+              <option value="" selected="selected" hidden="hidden">Future Plan :</option>
+              <option  value="Job">Job</option>
+              <option  value="Own Business">Own Business</option>
+              <option  value="Freelancing">Freelancing</option>
+            </select>
+
+            <select class="form-control" formControlName="Know">
+                <option value="" selected="selected" hidden="hidden">How did you know about us?</option>
+                <option  value="Newspaper/Magazine">Newspaper/Magazine</option>
+                <option  value="Internet Search">Internet Search</option>
+                <option  value="Social Media">Social Media</option>
+                <option  value="Events">Events</option>
+                <option  value="University/Academic Institution">University/Academic Institution</option>
+                <option  value="Friend/Family">Friend / Family</option>
+                <option  value="SMS/Email">SMS/Email</option>
+                <option  value="Other">Other</option>
+
+              </select>
+            <br>
+            <button type="submit" class="btn btn-primary done" [disabled]="!profileForm.valid">Done</button>
+          </form>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>

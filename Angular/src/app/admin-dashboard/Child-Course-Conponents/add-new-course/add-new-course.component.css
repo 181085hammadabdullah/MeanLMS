@@ -1,0 +1,133 @@
+.image-container{
+  float: left;
+  height: auto
+}
+.form-details-container{
+  float: right;
+  height: auto;
+}
+
+
+
+.form-container{
+  /* float: left; */
+  display: inline-block;
+  margin: 10px;
+}
+.form-body{
+  padding: 10px;
+  /* background-color: rgb(245, 245, 245);
+  border: 1px solid rgb(214, 214, 214); */
+  /* height: auto; */
+}
+.form-body h1{
+  font-size: 26px;
+  text-align: left;
+}
+.introduction-div{
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background-color: rgb(245, 245, 245);
+  border: 1px solid rgb(214, 214, 214);
+  height: auto;
+}
+.learn-div{
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background-color: rgb(245, 245, 245);
+  border: 1px solid rgb(214, 214, 214);
+  height: auto;
+}
+.requirements-div{
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background-color: rgb(245, 245, 245);
+  border: 1px solid rgb(214, 214, 214);
+  height: auto;
+}
+.description-div{
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background-color: rgb(245, 245, 245);
+  border: 1px solid rgb(214, 214, 214);
+  height: auto;
+}
+
+.underline{
+  border-top: 2px solid #1c325f;
+}
+.input, select{
+  /* border: 1px groove #1048b983; */
+  height: 40px;
+  width: 95%;
+  border-radius: 25px;
+  padding-left: 10px;
+  outline: none;
+  margin: 10px 10px;
+  border: #1c325f44 1px solid;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+  /* float: left; */
+
+  /* width: 95%;
+  height: 45px;
+  border-radius: 25px;
+  float: left;
+  padding-left: 15px;
+  outline: none;
+  margin: 5px 10px;
+  border: #1c325f44 1px solid;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1); */
+}
+input::placeholder, textarea::placeholder{
+  color: #102a5f;
+  font-weight: 500;
+  font-family:'poppin';
+}
+textarea{
+  border: 1px groove #1048b983;
+  width: 95%;
+  height: 100px;
+  border-radius: 25px;
+  padding-left: 10px;
+  outline: none;
+  margin: 10px 10px;
+}
+.input:focus, select:focus, textarea:focus{
+  /* border: 1px solid #19b934;
+  color: #194193;
+  font-weight: 500;
+  transition: 0.2s ease;
+  outline: none; */
+
+  outline: none;
+  padding: 10px;
+  font-family:'poppin';
+  color: #102a5f;
+  border: #102a5fa4 1px solid;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+form .btn{
+  width: 95%;
+}
+
+input[type="file"] {
+  visibility: hidden;
+  outline: none;
+}
+#img-btn{
+  margin-bottom: -30px;
+}
+.image-preview{
+  width: 95%;
+  height: auto;
+  padding: 10px;
+  margin: 0px 10px;
+  border-radius: 5px;
+  border: 1px solid #058f9496;
+  background-color: #86cdcf6b;
+  text-align: center;
+  overflow: hidden;
+}
+.image-preview img{
+  width: 300px;
+}

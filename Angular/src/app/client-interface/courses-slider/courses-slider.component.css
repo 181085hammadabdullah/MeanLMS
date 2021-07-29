@@ -1,0 +1,54 @@
+
+.success-container{
+  background: url("/assets/images/success.png");
+  background-size: cover;
+  height: 100vh;
+}
+.text-container{
+  text-align: center;
+}
+.text-container h1{
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 8% 2%;
+  /* position: relative; */
+  z-index: 0;
+  float: left;
+}
+.underline{
+  border-top: 2px solid #1c325f;
+}
+.success{
+  width: 100%;
+  height: 600px;
+  background-size: cover;
+  position: absolute;
+  z-index: -1;
+}
+/* .carousel-item{
+  box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+} */
+.carousel-inner{
+  box-shadow:  0 1px 4px rgba(0, 0, 0, 0.4), 0 0 40px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+}
+
+.comments-container{
+  height: auto;
+  padding: 15px;
+  background-color: white;
+  text-align: center;
+}
+.c-img{
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.comment-text h1{
+  font-size: 20px;
+}
+#quote{
+  color: #1c325f;
+  /* background-color: #1c325f; */
+}

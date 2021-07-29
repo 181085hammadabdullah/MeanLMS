@@ -1,0 +1,137 @@
+
+.course-form-container{
+  /* float: left; */
+  display: inline-block;
+  margin: 30px;
+}
+.form-container-body{
+  padding: 10px;
+  background-color: rgb(245, 245, 245);
+  border: 1px solid rgb(214, 214, 214);
+}
+.form-container-body h1{
+  font-size: 26px;
+  text-align: left;
+}
+.underline{
+  border-top: 2px solid #1c325f;
+}
+.input, select{
+  border: 1px groove #1048b983;
+  height: 40px;
+  width: 95%;
+  border-radius: 5px;
+  padding-left: 10px;
+  outline: none;
+  margin: 10px 10px;
+  /* float: left; */
+}
+textarea{
+  border: 1px groove #1048b983;
+  width: 95%;
+  border-radius: 5px;
+  padding-left: 10px;
+  outline: none;
+  margin: 10px 10px;
+}
+.input:focus, select:focus, textarea:focus{
+  border: 1px solid #19b934;
+  color: #194193;
+  font-weight: 500;
+  transition: 0.2s ease;
+  outline: none;
+  }
+form .btn{
+  width: 95%;
+}
+
+.flipper{
+  float: left;
+  text-align: center;
+  margin-top: 30px;
+}
+.instructor-img{
+  text-align: center;
+}
+.instructor-img img{
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 5px white solid;
+  display: inline-block;
+  margin-top: -40px;
+}
+.instructor-img h1{
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 10px;
+}
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 400px;
+  perspective: 1000px;
+  display: inline-block;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+}
+
+
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: white;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: rgb(240, 240, 240);
+  color: #194193;
+  transform: rotateY(180deg);
+}
+.flip-card-back h1{
+  color: #194193;
+  font-size: 2rem;
+  font-weight: bold;
+  padding-top: 15px;
+}
+.flip-card-back p{
+  color: #4f535c;
+  padding: 10px;
+}
+input[type="file"] {
+  visibility: hidden;
+  outline: none;
+}
+#img-btn{
+  margin-bottom: -30px;
+}
+.image-preview{
+  width: 95%;
+  height: auto;
+  padding: 10px;
+  margin: 0px 10px;
+  border-radius: 5px;
+  border: 1px solid #058f9496;
+  background-color: #86cdcf6b;
+  text-align: center;
+}

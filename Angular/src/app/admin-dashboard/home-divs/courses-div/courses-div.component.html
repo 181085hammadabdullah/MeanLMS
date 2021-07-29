@@ -1,0 +1,62 @@
+<div class="content col-lg-5 col-md-5 col-sm-10 col-xs-10" >
+  <div class="content-heading">
+    <h1>My Courses</h1>
+  </div>
+  <div class="content-text">
+    <div class="content-text-1" *ngFor="let item of student">
+      <!-- <img src="assets/images/graphic-design.jpg" alt="course-image">
+      <h1>Graphic Designing</h1>
+      <a [routerLink]="['/Lms/Lectures/view-lecture']" routerLinkActive="router-link-active" class="btn btn-primary course-btn" >View</a> -->
+      <div class="content-text">
+
+        <div class="item">
+          <a [routerLink]="['/admin-dashboard/courses/all-courses']" routerLinkActive="router-link-active" ><fa name="cubes" size="2x"></fa>
+          <p>All Programs</p>
+          </a>
+        </div>
+
+        <div class="item">
+          <a [routerLink]="['/admin-dashboard/courses/add-new-course']" routerLinkActive="router-link-active" ><fa name="edit" size="2x"></fa>
+          <p>Add New Program</p>
+          </a>
+        </div>
+
+
+
+      </div>
+    </div>
+
+
+
+    <div>
+      <hr>
+        <!-- <p>Want to explore more courses?</p>
+        <button class="btn btn-primary glow" [routerLink]="['/Courses']" routerLinkActive="router-link-active" >Enroll Now</button> -->
+
+        <div class="content-text-1">
+          <!-- <img src="assets/images/mean.jpg" alt="course-image">
+          <h1>Mean Stack<br>Developer</h1>
+          <a [routerLink]="['/Lms/Lectures/view-lecture']" routerLinkActive="router-link-active" class="btn btn-primary course-btn" >View</a> -->
+          <div class="content-text">
+
+            <div class="item">
+              <a [routerLink]="['/admin-dashboard/show-videos']" routerLinkActive="router-link-active" ><fa name="laptop" size="2x"></fa>
+              <p>View Lectures</p>
+              </a>
+            </div>
+
+            <div class="item">
+              <a [routerLink]="['/admin-dashboard/add-lectures']" routerLinkActive="router-link-active" ><fa name="film" size="2x"></fa>
+              <p>Add New Lecture</p>
+              </a>
+            </div>
+
+
+
+          </div>
+        </div>
+    </div>
+
+  </div>
+
+</div>

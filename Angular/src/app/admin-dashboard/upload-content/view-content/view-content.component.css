@@ -1,0 +1,126 @@
+.text-container{
+  padding: 100px 0px;
+}
+/* .news-container{} */
+.underline{
+  border-top: 2px solid #1c325f;
+}
+.news{
+  padding: 10px;
+  height: 120px;
+  margin-bottom: 50px;
+  box-shadow: 10px 15px 20px -16px rgba(0, 0, 0, 0.4);
+  transition: height 0.3s;
+  border: #1c325f67 1px solid;
+}
+.news:hover {
+  height: 130px;
+}
+.view-more{
+  padding: 5px;
+  background-color: #1c325f;
+  color: white;
+  width: 120px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  outline: none;
+  border: none;
+}
+.news-content{
+  /* display: none; */
+  height: auto;
+  margin: 10px auto;
+  /* border: 1px solid #1c325f; */
+}
+.news-content p {
+  color: #1c325f;
+  line-height: 18px;
+}
+.news-date{
+  text-align: center;
+  border-right: 1px rgb(197, 197, 197) groove;
+  float: left;
+  /* padding: 0px 0px; */
+}
+.news-date h1{
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+}
+.news-date p{
+  font-size: 18px;
+  color: black;
+  text-align: center;
+}
+.news-details{
+  float: left;
+}
+.news-details h1{
+  color: rgb(32, 32, 32);
+  font-weight: bold;
+  font-size: 18px;
+  padding: 3% 1%;
+}
+.news-details h1:hover{
+  color: #20448a;
+}
+.news-details-modal h1{
+  color: rgb(32, 32, 32);
+  font-weight: bold;
+  font-size: 18px;
+}
+.news-image-container{
+  float: left;
+}
+.news-image{
+  width: 150px;
+  height: 100px;
+}
+.news-image-modal{
+  text-align: center;
+}
+.news-image-modal img{
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .news{
+    height: 280px;
+    margin-bottom: 50px;
+    box-shadow: 10px 15px 20px -16px rgba(0, 0, 0, 0.4);
+  }
+
+  .news-image-container{
+    float: right;
+  }
+  .news-image{
+    width: 200px;
+    height: 150px;
+  }
+  /* .news-image-modal{
+    text-align: center;
+  }
+  .news-image-modal img{
+    width: 100%;
+    height: 100%;
+  } */
+}
+@media (max-width: 575.98px) {
+  .news{
+    height: 320px;
+    margin-bottom: 50px;
+    box-shadow: 10px 15px 20px -16px rgba(0, 0, 0, 0.4);
+  }
+  .news-image-container{
+    text-align: center;
+  }
+  .news-date{
+    text-align: center;
+    border-right: none;
+  }
+  .news-details h1{
+    text-align: center;
+  }
+}

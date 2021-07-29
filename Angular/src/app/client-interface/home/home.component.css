@@ -1,0 +1,30 @@
+.chat-btn{
+  cursor: pointer;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 200px;
+  height: 200px;
+  /* background-color: #e0e1e2; */
+}
+.chat-btn img{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 160px;
+  padding: 25px;
+  animation-name: floating3;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+@keyframes floating3 {
+  from { transform: translate(0,  0px); opacity: 0.8;}
+  65%  { transform: translate(0, 10px); opacity: 1;}
+  to   { transform: translate(0, -0px); opacity: 0.8;}
+  /* from {opacity: .1; transform: translate(0,  20px); }
+  to {opacity: 1; transform: translate(0,  0px);} */
+}
+.BottomSheetCss{
+  width: 30px;
+}

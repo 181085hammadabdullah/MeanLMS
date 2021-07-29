@@ -1,0 +1,128 @@
+.image-container{
+  float: left;
+  height: auto
+}
+.form-details-container{
+  float: right;
+  height: auto;
+}
+
+
+
+.form-container{
+  /* float: left; */
+  display: inline-block;
+  margin: 10px;
+}
+.form-body{
+  padding: 10px;
+  /* background-color: rgb(245, 245, 245);
+  border: 1px solid rgb(214, 214, 214); */
+  /* height: auto; */
+}
+.form-body h1{
+  font-size: 26px;
+  text-align: left;
+}
+.introduction-div{
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background-color: rgb(245, 245, 245);
+  border: 1px solid rgb(214, 214, 214);
+  /* height: auto; */
+}
+.learn-div{
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background-color: rgb(245, 245, 245);
+  border: 1px solid rgb(214, 214, 214);
+  height: auto;
+}
+.requirements-div{
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background-color: rgb(245, 245, 245);
+  border: 1px solid rgb(214, 214, 214);
+  height: auto;
+}
+.News-div{
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  /* background-color: rgb(245, 245, 245);
+  border: 1px solid rgb(214, 214, 214); */
+  /* height: auto; */
+}
+
+.underline{
+  border-top: 2px solid #1c325f;
+}
+.input, select{
+  /* border: 1px groove #1048b983; */
+  height: 40px;
+  width: 95%;
+  border-radius: 25px;
+  padding-left: 10px;
+  outline: none;
+  margin: 10px 10px;
+  border: #1c325f44 1px solid;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+  /* float: left; */
+
+  /* width: 95%;
+  height: 45px;
+  border-radius: 25px;
+  float: left;
+  padding-left: 15px;
+  outline: none;
+  margin: 5px 10px;
+  border: #1c325f44 1px solid;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1); */
+}
+input::placeholder, textarea::placeholder{
+  color: #102a5f7a;
+  font-weight: 500;
+  font-family:'poppin';
+}
+textarea, input{
+  width: 95%;
+  color: #102a5ff3;
+  background-color: rgba(245, 245, 245, 0.4);
+  border: 1px groove #1048b983;
+  border-radius: 15px;
+  padding-left: 10px;
+  outline: none;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+  margin: 10px 10px;
+}
+textarea:focus, input:focus {
+  color: #102a5fd5;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+}
+
+form .btn{
+  width: 95%;
+}
+
+input[type="file"] {
+  visibility: hidden;
+  outline: none;
+}
+#img-btn{
+  margin-bottom: -30px;
+}
+.image-preview{
+  width: 95%;
+  height: auto;
+  padding: 10px;
+  margin: 0px 10px;
+  border-radius: 5px;
+  border: 1px solid #058f9496;
+  background-color: #86cdcf6b;
+  text-align: center;
+  overflow: hidden;
+}
+.image-preview video{
+  width: 300px;
+}

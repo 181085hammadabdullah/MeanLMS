@@ -1,0 +1,68 @@
+<div class="chat-container">
+  <div class="chat-header">
+    <h4>Online</h4>
+    <p>We are live and ready to chat with you now. Say something to start a live chat.</p>
+  </div>
+
+  <div class="wellcome">
+    <h5>Hi {{UserName}},</h5>
+    <p>We warmly welcome you into our chat section. Our agents remain 24/7 online to help you out. <span><br>
+      Let's have a talk!
+    </span><br>
+    <a style="font-weight: 100;" class="btn btn-primay" (click)="IconClicked()">
+      <fa name="angle-right" class="wellcome-icon" size="2x" ></fa>
+      <fa name="angle-right" class="wellcome-icon2" size="2x" ></fa>
+      <fa name="angle-right" class="wellcome-icon3" size="2x" ></fa>
+    </a>
+    </p>
+
+  </div>
+
+  <div class="chat-connection">
+    <input type="text" class="name" placeholder="Name">
+    <input type="text" class="question" placeholder="Question">
+    <input type="submit" value="Start Chat" class="btn-chat-start btn btn-success" (click)="onChatStart()">
+  </div>
+
+
+  <div class="start-chat">
+
+<div class="chat-body">
+  <a style="font-style: none; text-decoration: none; color: #102a5f;" routerLink="/Lms/student-chat" routerLinkActive="router-link-active" (click)="GotoLMS()">
+    Go to Lms <span><fa name="angle-right" class="goto-lms" size="1x"></fa><fa name="angle-right" class="goto-lms2" size="1x"></fa></span></a>
+    <div class="smsdiv" #scrollMe [scrollTop]="scrollMe.scrollHeight" >
+
+<div *ngFor="let sms of messageArray" id="sms1" >
+        <div *ngIf="(sms.sender==LogInUser),else elseBlock" class="sender">
+            <div  class="alert alert-warning ml-4" role="alert" id="smsdiv">
+                <img class="sender-img" src="{{lastpics}}" alt="">
+              <h6>{{sms.message}}</h6>
+            </div>
+        </div>
+
+        <ng-template #elseBlock >
+          <div class="ml-auto ">
+              <div class="mr-4"  class="receiver">
+                <div  id="fsmsdiv" class="alert ">
+                    <img class="receiver-img" src="assets/images/user1.jpg" alt="">
+                  <h6>{{sms.message}}</h6>
+                </div>
+              </div>
+          </div>
+        </ng-template>
+
+</div>
+    </div>
+</div>
+
+
+<div class="chat-input">
+    <div class="input-group">
+      <input type="text" class="input" placeholder="Type your Message..." [(ngModel)]="message" name="message">
+      <input type="submit" value="Send" class="btn btn-success btn-chat-msg" (click)="sendMessage()">
+    </div>
+  </div>
+    </div>
+
+
+</div>

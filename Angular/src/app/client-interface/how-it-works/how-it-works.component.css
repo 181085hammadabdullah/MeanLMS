@@ -1,0 +1,18 @@
+
+.text-container{
+  padding: 100px 0px;
+}
+
+.underline{
+  border-top: 2px solid #1c325f;
+}
+
+.item-container{
+  text-align: center;
+  margin-top: -70px;
+}
+.how-img{
+  width: 400px;
+  display: inline-block;
+}
+

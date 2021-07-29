@@ -1,0 +1,42 @@
+
+<div class="col-lg-6  col-md-6 col-sm-12 col-xs-12 course-form-container">
+    <div class="form-container-body">
+        <h1>Add New Course :<span><br><p class="underline"></p></span> </h1>
+        <form [formGroup]="CourseForm" novalidate (submit)="AddCourse()">
+            {{ this.CourseForm.value | json }}
+            <input class="input"  type="text" placeholder="Course Name" formControlName="name">
+            <button class="btn btn-info" id="img-btn" (click)="imagePicker.click()">Add Image</button>
+            <input type="file" #imagePicker (change)="onImagePicked($event)">
+            <p style="color: #036a6ec2">Image Dimensions: 450 x 300 </p>
+            <div class="image-preview" *ngIf="imagePreview !== '' && imagePreview && CourseForm.get('image').valid">
+              <img [src]="imagePreview" [alt]="CourseForm.value.name + ' Image'">
+            </div>
+            <select class="form-control" formControlName="Duration">
+                <option value="" selected="selected" hidden="hidden">Course Duration :</option>
+                <option  value="1 Month">1 Month</option>
+                <option  value="2 Months">2 Months</option>
+                <option  value="3 Months">3 Months</option>
+                <option  value="6 Months">6 Months</option>
+                <option  value="1 Year">1 Year</option>
+              </select>
+              <select class="form-control" formControlName="Fees">
+                  <option value="" selected="selected" hidden="hidden">Course Fee :</option>
+                  <option  value="Rs: 10,000/-Rs: 10,000/-">Rs: 10,000/-</option>
+                  <option  value="Rs: 15,000/-">Rs: 15,000/-</option>
+                  <option  value="Rs: 20,000/-">Rs: 20,000/-</option>
+                  <option  value="Rs: 25,000/-">Rs: 25,000/-</option>
+                  <option  value="Rs: 30,000/-">Rs: 30,000/-</option>
+                  <option  value="Rs: 35,000/-">Rs: 35,000/-</option>
+                  <option  value="Rs: 40,000/-">Rs: 40,000/-</option>
+                  <option  value="Rs: 45,000/-">Rs: 45,000/-</option>
+                  <option  value="Rs: 50,000/-">Rs: 50,000/-</option>
+                </select>
+            <!-- <input class="input"  type="text" placeholder="Teacher Name" formControlName="teachername">
+            <input class="input"  type="text" placeholder="Course Sub Heading" formControlName="coursesubheading"> -->
+            <!-- <input class="input"  type="text" placeholder="Course Description" formControlName="coursedescription"> -->
+            <textarea formControlName="Description" id="" cols="30" rows="2" placeholder="Course Description..."></textarea>
+
+            <button type="submit" class="btn btn-primary" [disabled]="!CourseForm.valid">Add New</button>
+        </form>
+    </div>
+  </div>

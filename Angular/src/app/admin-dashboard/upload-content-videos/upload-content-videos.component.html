@@ -1,0 +1,79 @@
+<div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-3 col-sm-5 col-xs-12 courses-div" *ngFor="let item of programs">
+        <div class="item-div">
+          <div class="row">
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 heading-div">
+              <p>{{item.name}}</p>
+            </div><hr>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 content-div">
+              <div class="text-div">
+                <p>{{item.Introduction}}
+                  <!-- This is random text. This is random text. This is random text. This is random text. This is random text. -->
+                </p>
+              </div>
+              <div class="image-div">
+                <img src="{{item.imagePath}}" alt="">
+              </div>
+            </div><hr>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 action-div">
+              <button class="btn btn-dark btn2">View</button>
+              <button class="btn btn-success btn1">Add</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="col-lg-3 col-md-3 col-sm-5 col-xs-12 courses-div">
+          <div class="item-div">
+            <div class="row">
+
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 heading-div">
+                <p>Course Name</p>
+              </div><hr>
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 content-div">
+                <div class="text-div">
+                  <p>This is random text. This is random text. This is random text. This is random text. This is random text. </p>
+                </div>
+                <div class="image-div">
+                  <img src="assets/images/angular.jpg" alt="">
+                </div>
+              </div><hr>
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 action-div">
+                <button class="btn btn-dark btn2">View</button>
+                <button class="btn btn-success btn1">Add</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-3 col-sm-5 col-xs-12 courses-div">
+            <div class="item-div">
+              <div class="row">
+
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 heading-div">
+                  <p>Course Name</p>
+                </div><hr>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 content-div">
+                  <div class="text-div">
+                    <p>This is random text. This is random text. This is random text. This is random text. This is random text. </p>
+                  </div>
+                  <div class="image-div">
+                    <img src="assets/images/angular.jpg" alt="">
+                  </div>
+                </div><hr>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 action-div">
+                  <button class="btn btn-dark btn2">View</button>
+                  <button class="btn btn-success btn1">Add</button>
+                </div>
+
+              </div>
+            </div>
+          </div> -->
+    </div>
+  </div>
+</div>

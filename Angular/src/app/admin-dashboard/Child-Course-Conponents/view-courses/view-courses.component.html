@@ -1,0 +1,41 @@
+<div class="course-container">
+
+    <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 flipper" *ngFor="let program of programs">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="{{program.imagePath}}" alt="Avatar" style="width:300px;height:200px;">
+                    <div class="instructor-img">
+                        <!-- <img src="assets/images/person-1.jpg" alt="Avatar"> -->
+                        <!-- <p>Ali Hassan</p> -->
+                        <br><br>
+                        <h1>{{program.name}}</h1>
+                        <p style="float: right; margin-top: 30%; margin-right: 10px">Duration: <span style="color: #00b418">{{program.Duration}}</span></p>
+
+                    </div>
+                  </div>
+                  <div class="flip-card-back">
+                    <h1>{{program.name}}</h1>
+                    <p>{{program.Introduction}}</p>
+                    <h2>Duration: <span style="color: #05286d">{{program.Duration}}</span></h2>
+                    <p class="price" style="color: rgb(10, 131, 16)">{{program.Fees}}</p>
+                    <a class="btn" >
+                      <!-- <p style="font-size: 18px;">Take this course <span><fa class="arrow" name="arrow-circle-right" size="1x"></fa></span></p> -->
+                      <button class="btn btn-outline-dark" style="margin: auto 5px;" (click)="DeleteProgram(program.id)">
+                        <span><fa name="trash" size="1x"></fa></span> Delete</button>
+
+                      <button class="btn btn-success" style="margin: auto 5px;" (click)="Fullpage(program.id)">
+                        <span><fa name="expand" size="1x"></fa></span> Full Page View</button>
+                    </a>
+
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+
+</div>

@@ -1,0 +1,11 @@
+.side{
+  float: left;
+}
+.content{
+  height: 600px;
+  /* border: 1px groove #25385f; */
+  background-color: rgb(248, 247, 247);
+  z-index: -1;
+  float: left;
+  margin-left: -15px;
+}

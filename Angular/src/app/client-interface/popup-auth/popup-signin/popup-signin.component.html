@@ -1,0 +1,29 @@
+<div>
+<div class="signin-container">
+  <div class="form-container">
+    <div class="form-card">
+        <!-- <h1>Trainee SignIn Form</h1> -->
+        <p>You are not signed in to your account. <br> Please Sign In first!</p>
+      <div class="my-form">
+
+        <form [formGroup]="stdForm" novalidate (submit)="SingIn()">
+          <!-- {{ this.stdForm.value | json }} -->
+
+          <input class="input" id="email" type="email" placeholder="Email" formControlName="email">
+          <input class="input" id="password" type="password" placeholder="Password" formControlName="password">
+
+          <button type="submit" class="btn btn-primary" [disabled]="!stdForm.valid">Sign In</button>
+        </form>
+<hr>
+        <div class="form-end">
+            <p>Don't have any account? <br> Please visit the Registeration Page and the get back here!</p>
+            <a class="signin-link" (click)="Register()" style="cursor: pointer">Register</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</div>

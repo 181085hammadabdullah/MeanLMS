@@ -1,0 +1,302 @@
+
+<div class="course-container">
+
+    <div class="container">
+        <div class="intro-text">
+            <h1>Our Top Courses</h1>
+        </div>
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 flipper" *ngFor="let program of programs">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="{{program.imagePath}}" alt="Avatar" style="width:300px;height:200px;">
+                    <div class="instructor-img">
+                        <!-- <img src="assets/images/person-1.jpg" alt="Avatar"> -->
+                        <!-- <p>Ali Hassan</p> -->
+                        <br><br>
+                        <h1>{{program.name}}</h1>
+                        <p style="float: right; margin-top: 30%; margin-right: 10px">Duration: <span style="color: #00b418">{{program.Duration}}</span></p>
+
+                    </div>
+                  </div>
+                  <div class="flip-card-back">
+                    <h1>{{program.name}}</h1>
+                    <p>{{program.Introduction}}</p>
+                    <h2>Duration: <span style="color: #05286d">{{program.Duration}}</span></h2>
+                    <p class="price" style="color: rgb(10, 131, 16)">{{program.Fees}}</p>
+
+                    <a class="btn1" [routerLink]="['/Lms/View-Course-Details']" routerLinkActive="router-link-active" (click)="ViewFull(program.id)">
+                      <p style="font-size: 18px;">Take this course <span><fa class="arrow" name="arrow-circle-right" size="1x"></fa></span></p>
+                    </a>
+
+                  </div>
+                </div>
+              </div>
+          </div>
+
+
+
+          <!-- <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 flipper">
+              <div class="flip-card">
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                      <img src="assets/images/front-end.jpg" alt="Avatar" style="width:300px;height:200px;">
+                      <div class="instructor-img">
+                          <img src="assets/images/person-1.jpg" alt="Avatar">
+                          <p>Ali Hassan</p><br>
+                          <h1>FrontEnd Developer</h1>
+                      </div>
+                    </div>
+                    <div class="flip-card-back">
+                      <h1>Frontend Developer</h1>
+                      <p>Architect & Engineer</p>
+                      <p>We love that guy</p> <br>
+                      <p>The communication was great, they understood everything that we needed</p>
+                    </div>
+                  </div>
+                </div>
+          </div>
+
+
+              <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 flipper">
+                  <div class="flip-card">
+                      <div class="flip-card-inner">
+                          <div class="flip-card-front">
+                              <img src="assets/images/full-stack.jpg" alt="Avatar" style="width:300px;height:200px;">
+                              <div class="instructor-img">
+                                  <img src="assets/images/person-1.jpg" alt="Avatar">
+                                  <p>Ali Hassan</p><br>
+                                  <h1>FullStack Developer</h1>
+                              </div>
+                            </div>
+                        <div class="flip-card-back">
+                            <h1>Full Stack Developer</h1>
+                            <p>Architect & Engineer</p>
+                            <p>We love that guy</p> <br>
+                            <p>The communication was great, they understood everything that we needed</p>
+                        </div>
+                      </div>
+                    </div>
+              </div>
+
+
+              <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 flipper">
+                  <div class="flip-card">
+                      <div class="flip-card-inner">
+                          <div class="flip-card-front">
+                              <img src="assets/images/mean.jpg" alt="Avatar" style="width:300px;height:200px;">
+                              <div class="instructor-img">
+                                  <img src="assets/images/person-1.jpg" alt="Avatar">
+                                  <p>Ali Hassan</p><br>
+                                  <h1>MeanStack Developer</h1>
+                              </div>
+                            </div>
+                        <div class="flip-card-back">
+                            <h1>Mean Stack Developer</h1>
+                            <p>Architect & Engineer</p>
+                            <p>We love that guy</p> <br>
+                            <p>The communication was great, they understood everything that we needed</p>
+                        </div>
+                      </div>
+                    </div>
+              </div>
+
+
+              <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 flipper">
+                  <div class="flip-card">
+                      <div class="flip-card-inner">
+                          <div class="flip-card-front">
+                              <img src="assets/images/graphic-design.jpg" alt="Avatar" style="width:300px;height:200px;">
+                              <div class="instructor-img">
+                                  <img src="assets/images/person-1.jpg" alt="Avatar">
+                                  <p>Ali Hassan</p><br>
+                                  <h1>Graphic Design</h1>
+                              </div>
+                            </div>
+                        <div class="flip-card-back">
+                            <h1>Graphic Design</h1>
+                            <p>Architect & Engineer</p>
+                            <p>We love that guy</p> <br>
+                            <p>The communication was great, they understood everything that we needed</p>
+                        </div>
+                      </div>
+                    </div>
+              </div>
+
+
+                  <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 flipper">
+                      <div class="flip-card">
+                          <div class="flip-card-inner">
+                              <div class="flip-card-front">
+                                  <img src="assets/images/seo.jpg" alt="Avatar" style="width:300px;height:200px;">
+                                  <div class="instructor-img">
+                                      <img src="assets/images/person-1.jpg" alt="Avatar">
+                                      <p>Ali Hassan</p><br>
+                                      <h1>SEO <span><br><br><h1 style="font-size: 16px">(Search Engine Optimization)</h1></span></h1>
+                                  </div>
+                                </div>
+                            <div class="flip-card-back">
+                                <h1>Search Engine Optimization</h1>
+                                <p>Architect & Engineer</p>
+                                <p>We love that guy</p> <br>
+                                <p>The communication was great, they understood everything that we needed</p>
+                            </div>
+                          </div>
+                        </div>
+                  </div>
+
+
+                  <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 flipper">
+                      <div class="flip-card">
+                          <div class="flip-card-inner">
+                              <div class="flip-card-front">
+                                  <img src="assets/images/node.jpg" alt="Avatar" style="width:300px;height:200px;">
+                                  <div class="instructor-img">
+                                      <img src="assets/images/person-1.jpg" alt="Avatar">
+                                      <p>Ali Hassan</p><br>
+                                      <h1>Node.js</h1>
+                                  </div>
+                                </div>
+                            <div class="flip-card-back">
+                                <h1>Node.js</h1>
+                                <p>Architect & Engineer</p>
+                                <p>We love that guy</p> <br>
+                                <p>The communication was great, they understood everything that we needed</p>
+                            </div>
+                          </div>
+                        </div>
+                  </div>
+
+                  <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 flipper">
+                      <div class="flip-card">
+                          <div class="flip-card-inner">
+                              <div class="flip-card-front">
+                                  <img src="assets/images/creative-writing.jpg" alt="Avatar" style="width:300px;height:200px;">
+                                  <div class="instructor-img">
+                                      <img src="assets/images/person-1.jpg" alt="Avatar">
+                                      <p>Ali Hassan</p><br>
+                                      <h1>Creative Writing</h1>
+                                  </div>
+                                </div>
+                            <div class="flip-card-back">
+                                <h1>Creative Writing</h1>
+                                <p>Architect & Engineer</p>
+                                <p>We love that guy</p> <br>
+                                <p>The communication was great, they understood everything that we needed</p>
+                            </div>
+                          </div>
+                        </div>
+                  </div>
+
+                  <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 flipper">
+                      <div class="flip-card">
+                          <div class="flip-card-inner">
+                              <div class="flip-card-front">
+                                  <img src="assets/images/mongodb.jpg" alt="Avatar" style="width:300px;height:200px;">
+                                  <div class="instructor-img">
+                                      <img src="assets/images/person-1.jpg" alt="Avatar">
+                                      <p>Ali Hassan</p><br>
+                                      <h1>MongoDb</h1>
+                                  </div>
+                                </div>
+                            <div class="flip-card-back">
+                                <h1>MongoDb (NoSQL Database)</h1>
+                                <p>Architect & Engineer</p>
+                                <p>We love that guy</p> <br>
+                                <p>The communication was great, they understood everything that we needed</p>
+                            </div>
+                          </div>
+                        </div>
+                  </div>
+
+                  <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 flipper">
+                      <div class="flip-card">
+                          <div class="flip-card-inner">
+                              <div class="flip-card-front">
+                                  <img src="assets/images/angular.jpg" alt="Avatar" style="width:300px;height:200px;">
+                                  <div class="instructor-img">
+                                      <img src="assets/images/person-1.jpg" alt="Avatar">
+                                      <p>Ali Hassan</p><br>
+                                      <h1>Angular 8 <span><br><br><h1 style="font-size: 16px">(Master Class)</h1></span></h1>
+                                  </div>
+                                </div>
+                            <div class="flip-card-back">
+                                <h1>Angular 8</h1>
+                                <p>Architect & Engineer</p>
+                                <p>We love that guy</p> <br>
+                                <p>The communication was great, they understood everything that we needed</p>
+                            </div>
+                          </div>
+                        </div>
+                  </div>
+
+                  <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 flipper">
+                      <div class="flip-card">
+                          <div class="flip-card-inner">
+                              <div class="flip-card-front">
+                                  <img src="assets/images/digital-marketing.png" alt="Avatar" style="width:300px;height:200px;">
+                                  <div class="instructor-img">
+                                      <img src="assets/images/person-1.jpg" alt="Avatar">
+                                      <p>Ali Hassan</p><br>
+                                      <h1>Digital Marketing</h1>
+                                  </div>
+                                </div>
+                            <div class="flip-card-back">
+                                <h1>Digital Marketing</h1>
+                                <p>Architect & Engineer</p>
+                                <p>We love that guy</p> <br>
+                                <p>The communication was great, they understood everything that we needed</p>
+                            </div>
+                          </div>
+                        </div>
+                  </div>
+
+                  <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 flipper">
+                      <div class="flip-card">
+                          <div class="flip-card-inner">
+                              <div class="flip-card-front">
+                                  <img src="assets/images/ecommerce.jpg" alt="Avatar" style="width:300px;height:200px;">
+                                  <div class="instructor-img">
+                                      <img src="assets/images/person-1.jpg" alt="Avatar">
+                                      <p>Ali Hassan</p><br>
+                                      <h1>E -Commerce <span><br><br><h1 style="font-size: 18px">Management</h1></span></h1>
+                                  </div>
+                                </div>
+                            <div class="flip-card-back">
+                                <h1>E -Commerce</h1>
+                                <p>Architect & Engineer</p>
+                                <p>We love that guy</p> <br>
+                                <p>The communication was great, they understood everything that we needed</p>
+                            </div>
+                          </div>
+                        </div>
+                  </div>
+
+                  <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 flipper">
+                      <div class="flip-card">
+                          <div class="flip-card-inner">
+                              <div class="flip-card-front">
+                                  <img src="assets/images/mobile-app.png" alt="Avatar" style="width:300px;height:200px;">
+                                  <div class="instructor-img">
+                                      <img src="assets/images/person-1.jpg" alt="Avatar">
+                                      <p>Ali Hassan</p><br>
+                                      <h1>Mobile App Development</h1>
+                                  </div>
+                                </div>
+                            <div class="flip-card-back">
+                                <h1>Mobile App Development</h1>
+                                <p>Architect & Engineer</p>
+                                <p>We love that guy</p> <br>
+                                <p>The communication was great, they understood everything that we needed</p>
+                            </div>
+                          </div>
+                        </div>
+                  </div> -->
+
+        </div>
+      </div>
+
+</div>
+

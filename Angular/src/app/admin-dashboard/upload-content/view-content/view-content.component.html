@@ -1,0 +1,61 @@
+<div class="">
+  <div class="container">
+    <div class="text-container">
+        <h1>View Posts <button class="btn btn-success" [routerLink]="['/admin-dashboard/upload']" routerLinkActive="router-link-active" style="float: right">Add Post</button>
+          <span><br><p class="underline"></p></span> </h1>
+    </div>
+
+      <div class="news" *ngFor="let item of posts">
+        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4 news-date">
+          <h1> <fa name="bell" size="1x"></fa> <span><br><p>_</p></span></h1>
+        </div>
+        <div class="col-lg-7 col-md-7 col-sm-8 col-xs-8 news-details">
+          <h1>{{item.postHeading}}</h1>
+          <!-- <p class="view-more">View More </p> -->
+          <button class="view-more" type="button" data-toggle="modal" data-target="#exampleModalLong" (click)="GetOneNews(item.id)">View More <fa name="chevron-circle-down" size="1x"></fa></button>
+          <button class="btn btn-dark" style="margin: auto 10px;" (click)="DeletePost(item.id)">Delete</button>
+          <div class="news-content">
+            <!-- <h6>{{item.postContent}}</h6> -->
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-8 col-xs-8 news-image-container">
+          <img src="{{item.imagePath}}" alt="" class="news-image">
+        </div>
+      </div>
+
+
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">
+              <div class="news-details-modal" *ngFor="let item of OnePost">
+                <h1>{{item.postHeading}}</h1>
+              </div>
+          </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div class="news-image-modal" *ngFor="let item of OnePost">
+              <img src="{{item.imagePath}}" alt="">
+            </div>
+
+            <div class="news-content" *ngFor="let item of OnePost">
+              <h6>{{item.postContent}}</h6>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  </div>
+</div>

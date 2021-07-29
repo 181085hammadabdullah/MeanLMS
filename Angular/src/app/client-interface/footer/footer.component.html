@@ -1,0 +1,42 @@
+<div *ngIf="nav.visible">
+  <div class="footer-container">
+      <div class="container">
+          <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 logo-image">
+            <img src="assets/images/logo.png" alt="logo">
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 content1">
+            <div>
+              <h1>Contact EducateMe.com</h1>
+              <p> <span><fa name="phone-square" style="margin-right: 10px; color: #749be9"></fa></span> 0312-345-6789 , 0313-579-2468</p>
+              <p> <span><fa name="envelope" style="margin-right: 10px; color: #749be9"></fa></span>abc123@gmail.com</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 content2">
+            <div>
+              <h1>Useful Links</h1>
+              <div class="links">
+                <a [routerLink]="['/Courses']" routerLinkActive="router-link-active" role="button">Courses <span><br><p class="underline"></p></span></a>
+                <a [routerLink]="['/How-it-works']" routerLinkActive="router-link-active" >How it Works <span><br><p class="underline"></p></span></a>
+                <a [routerLink]="['/SignIn']" routerLinkActive="router-link-active" >Lms <span><br><p class="underline"></p></span></a>
+                <a [routerLink]="['/News-and-Events']" routerLinkActive="router-link-active" >News & Events <span><br><p class="underline"></p></span></a>
+                <a [routerLink]="['/Contact-Us']" routerLinkActive="router-link-active" >Contact us <span><br><p class="underline"></p></span></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 footer-note-containers">
+
+          <!-- <p class="footer-note">
+            Copyright &copy; {{today}}
+              All rights reserved | Final Project Made by <span style="color:#02a9f7;">Hammad & Zaki</span>
+          </p> -->
+          <div class="footer-note-container">
+            <p class="footer-note">
+                Copyright &copy; {{today}} All rights reserved | Final Project Made by <span style="color:rgb(77, 255, 23); font-weight: bold;">Hammad & Zaki</span>
+            </p>
+          </div>
+
+          </div>
+        </div>
+  </div>
+</div>

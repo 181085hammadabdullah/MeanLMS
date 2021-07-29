@@ -1,0 +1,126 @@
+<div>
+  <div class="pending-container">
+      <div class="text-container">
+          <h1>All Students :<span><br><p class="underline"></p></span> </h1>
+      </div>
+
+
+
+   <table class="table table-striped table-bordered table-hover table-condensed">
+       <thead class="thead-dark">
+           <tr>
+               <th>First Name</th>
+               <th>Last Name</th>
+               <th>Program</th>
+               <th colspan="2" >Action</th>
+
+           </tr>
+       </thead>
+
+       <tbody *ngFor = "let stds of students">
+           <tr>
+                <td>{{stds.profile.First_Name}}</td>
+                <td>{{stds.profile.Last_Name}}</td>
+                <td>{{stds.Program.name}}</td>
+                <td><button class="btn btn-success" (click)="Approve()"  id="action">Chat</button></td>
+                <td>
+                   <button type="button" (click)="ShowStd(stds._id)" class="btn btn-info" data-toggle="modal" data-target="#exampleModalCenter">
+                       View More
+                     </button>
+                </td>
+           </tr>
+       </tbody>
+
+     </table>
+
+
+      <!-- Modal -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Student Details</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="model-container">
+
+              <div class="image-container">
+                <img src="assets/images/person-1.jpg" alt="profile image" class="img">
+                <h1>Profile Image</h1>
+              </div>
+
+                <table class="table table-striped table-bordered table-hover table-condensed">
+                    <tr *ngFor="let stds of std">
+                      <th>First Name:</th>
+                      <td *ngIf="stds.status == 'pending'">{{stds.profile.First_Name}}</td>
+                    </tr>
+                    <tr *ngFor="let stds of std">
+                      <th>Last Name:</th>
+                      <td>{{stds.profile.Last_Name}}</td>
+                    </tr>
+                    <tr *ngFor="let stds of std">
+                      <th>Email:</th>
+                      <td>{{stds.profile.Email}}</td>
+                    </tr>
+                    <tr *ngFor="let stds of std">
+                      <th>Phone:</th>
+                      <td>{{stds.profile.Phone_No}}</td>
+                    </tr>
+                    <tr *ngFor="let stds of std">
+                      <th>Address:</th>
+                      <td>{{stds.profile.Address}}</td>
+                    </tr>
+                    <tr *ngFor="let stds of std">
+                      <th>Gender:</th>
+                      <td>{{stds.profile.Gender}}</td>
+                    </tr>
+                    <tr *ngFor="let stds of std">
+                      <th>CNIC:</th>
+                      <td>{{stds.profile.CNIC}}</td>
+                    </tr>
+                    <tr *ngFor="let stds of std">
+                      <th>Country:</th>
+                      <td>{{stds.profile.Country}}</td>
+                    </tr>
+                    <tr *ngFor="let stds of std">
+                      <th>City:</th>
+                      <td>{{stds.profile.City}}</td>
+                    </tr>
+                    <tr *ngFor="let stds of std">
+                      <th>Qualification:</th>
+                      <td>{{stds.Acedmic.Qualification}}</td>
+                    </tr>
+                    <tr *ngFor="let stds of std">
+                      <th>Specialization:</th>
+                      <td>{{stds.Acedmic.Specialization}}</td>
+                    </tr>
+                    <tr *ngFor="let stds of std">
+                      <th>Current Status:</th>
+                      <td>{{stds.Acedmic.Current_Status}}</td>
+                    </tr>
+                    <tr *ngFor="let stds of std">
+                      <th>Future Plans:</th>
+                      <td>{{stds.Acedmic.Future_Plan}}</td>
+                    </tr>
+                    <tr *ngFor="let stds of std">
+                      <th>Know Abt us:</th>
+                      <td>{{stds.Acedmic.Know}}</td>
+                    </tr>
+                  </table>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+  </div>
+</div>

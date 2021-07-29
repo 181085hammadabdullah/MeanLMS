@@ -1,0 +1,15 @@
+<table class="table table-striped table-bordered table-hover table-condensed">
+        <thead class="thead-dark">
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Chat Info</th>
+     
+                </tr>
+            </thead>
+            <tbody *ngFor = "let user of users">
+                         <td>{{user.profile.First_Name}}</td>
+                         <td>{{user.profile.Last_Name}}</td>
+                         <td><button class="btn btn-success" (click)="chat(user.profile.First_Name)"  id="action">Start Chat</button></td>
+                </tbody>
+</table>

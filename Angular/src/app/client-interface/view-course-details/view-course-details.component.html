@@ -1,0 +1,160 @@
+<div>
+  <div class="container">
+    <div class="text-container">
+        <h1>Course Details
+          <div class="links">
+            <a [routerLink]="['/']" routerLinkActive="router-link-active" > <fa class="arrow" name="arrow-circle-left" size="1x" style="color: rgb(144, 236, 5)"></fa>Home</a>
+            <a [routerLink]="['/Lms']" routerLinkActive="router-link-active"> <fa class="arrow" name="arrow-circle-up" size="1x" style="color: grey"></fa>Lms</a>
+            <a [routerLink]="['/Courses']" routerLinkActive="router-link-active"> <fa class="arrow" name="arrow-circle-right" size="1x" style="color: #1c325f"></fa>Other Courses</a>
+          </div>
+          <span><br><p class="underline"></p></span> </h1>
+    </div>
+    <div class="body" *ngFor="let item of course1">
+      <h2 style="text-align: center;">{{item.name}}</h2>
+      <div class="row">
+
+
+        <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12 image-div">
+          <div class="image-div-inside">
+              <img src="{{item.imagePath}}" alt="course-image">
+              <div class="buy-div">
+                <h2 class="price">{{item.Fees}}</h2>
+                <button class="btn1 btn-success" (click)="onBuyCourse()">
+                  <fa class="icon" name="shopping-cart" size="1x"></fa> Buy Now</button>
+                <p style="font-size: 13px">30-Day Money Back Gurantee</p>
+                <div class="buy-content">
+                  <p class="item1">This Course Includes:</p>
+                  <p class="item"><fa class="icon" name="photo" size="1x"></fa> Video Lectures</p>
+                  <p class="item"><fa class="icon" name="clipboard" size="1x"></fa> Download-able Resources</p>
+                  <p class="item"><fa class="icon" name="heartbeat" size="1x"></fa> Full Lifetime Access</p>
+                  <p class="item"><fa class="icon1" name="mobile" size="1x"></fa> Access on Mobile & TV</p>
+                  <p class="item"><fa class="icon" name="certificate" size="1x"></fa> Certificate of Completion</p>
+                </div>
+              </div>
+          </div>
+        </div>
+
+
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-div">
+            <p>
+              {{item.Introduction}}
+                <!-- The only course you need to learn to code and become a full-stack web developer. HTML, CSS, Javascript, Node and more
+                <br>⭐️⭐️⭐️⭐️⭐️ -->
+            </p>
+            <h4>What You'll Learn</h4>
+            <div class="row Learn">
+
+              <div class="items-learn">
+                <div class="row">
+                  <div class="col-lg-6 col-md-5 col-sm-5 col-xs-5 side-left">
+                      <div class="item-icon col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                        <fa name="paper-plane" size="1x"></fa>
+                      </div>
+                      <div class="item-text col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                        <p>{{item.learn1}}</p>
+                      </div>
+                  </div>
+                  <div class="col-lg-6 col-md-5 col-sm-5 col-xs-5 side-right">
+                      <div class="item-icon col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                        <fa name="paper-plane" size="1x"></fa>
+                      </div>
+                      <div class="item-text col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                        <p>{{item.learn2}}</p>
+                      </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="items-learn">
+                  <div class="row">
+                    <div class="col-lg-6 col-md-5 col-sm-5 col-xs-5 side-left">
+                        <div class="item-icon col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                          <fa name="paper-plane" size="1x"></fa>
+                        </div>
+                        <div class="item-text col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                          <p>{{item.learn3}}</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-5 col-sm-5 col-xs-5 side-right">
+                        <div class="item-icon col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                          <fa name="paper-plane" size="1x"></fa>
+                        </div>
+                        <div class="item-text col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                          <p>{{item.learn4}}</p>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="items-learn">
+                    <div class="row">
+                      <div class="col-lg-6 col-md-5 col-sm-5 col-xs-5 side-left">
+                          <div class="item-icon col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                            <fa name="paper-plane" size="1x"></fa>
+                          </div>
+                          <div class="item-text col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                            <p>{{item.learn5}}</p>
+                          </div>
+                      </div>
+                      <div class="col-lg-6 col-md-5 col-sm-5 col-xs-5 side-right">
+                          <div class="item-icon col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                            <fa name="paper-plane" size="1x"></fa>
+                          </div>
+                          <div class="item-text col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                            <p>{{item.learn6}}</p>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+
+            </div>
+            <h4>Requirements</h4>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 side-left">
+                    <div class="item-icon col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                      <fa name="shield" size="1x"></fa>
+                    </div>
+                    <div class="item-text col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                      <p>{{item.Requirement1}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 side-left">
+                    <div class="item-icon col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                      <fa name="shield" size="1x"></fa>
+                    </div>
+                    <div class="item-text col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                      <p>{{item.Requirement2}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 side-left">
+                    <div class="item-icon col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                      <fa name="shield" size="1x"></fa>
+                    </div>
+                    <div class="item-text col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                      <p>{{item.Requirement3}}</p>
+                    </div>
+                </div>
+            </div>
+            <h4>Description</h4>
+            <div class="row Description">
+              <p class="item-text">
+                  {{item.Description}}
+                  <!-- Welcome to the Complete Web Development Bootcamp, the only course you need to learn to code and become a full-stack web developer. With over 12,000 ratings and a 4.8 average my Web Development course is one of the HIGHEST RATED courses in the history of Udemy!
+                <br><br>
+                  At 43+ hours, this Web Development course is without a doubt the most comprehensive web development course available online. Even if you have zero programming experience, this course will take you from beginner to mastery. -->
+              </p>
+            </div>
+          </div>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

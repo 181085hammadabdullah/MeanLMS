@@ -1,0 +1,49 @@
+<div>
+
+  <div class="container">
+    <div class="text-container">
+
+    </div>
+  </div>
+
+  <div class="form-container">
+    <div class="form-card">
+        <h1>Trainee SignUP Form</h1>
+        <p>Create your LMS account. Please Fill the details carefully.</p>
+      <div class="my-form">
+
+        <form [formGroup]="stdForm" novalidate (submit)="Singup()">
+          <!-- {{ this.stdForm.value | json }} -->
+          <input class="input" id="name" type="text" placeholder="Name" formControlName="fname">
+          <input class="input" id="email" type="email" placeholder="Email" formControlName="email">
+
+            <!-- <select class="form-control" formControlName="program">
+              <option value="" selected="selected" hidden="hidden">Select Course:</option>
+              <option value="full stack">Full Stack</option>
+              <option value="seo">SEO</option>
+              <option value="creative writing">Creative Writing</option>
+              <option value="graphic design">Graphic Design</option>
+            </select>
+
+            <select class="form-control" formControlName="batch" placeholder="Batch">
+              <option value="" selected="selected" hidden="hidden">Choose Batch :</option>
+              <option  value="1">1</option>
+              <option  value="2">2</option>
+              <option  value="3">3</option>
+              <option  value="4">4</option>
+            </select> -->
+          <input class="input" id="password" type="password" placeholder="Password" formControlName="password">
+          <!-- <input class="input" id="phone" type="text" placeholder="Phone" formControlName="phoneno">
+          <input class="input" id="address" type="text" placeholder="Address" formControlName="address"> -->
+          <button type="submit" class="btn btn-primary" [disabled]="!stdForm.valid">Sign Up</button>
+        </form>
+<hr>
+        <div class="form-end">
+            <p>Already have account?</p>
+            <a class="signin-link" [routerLink]="['/SignIn']" routerLinkActive="router-link-active">Sign In</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

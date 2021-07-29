@@ -1,0 +1,61 @@
+.div{
+  margin: 20px;
+  text-align: center;
+}
+.container{
+  display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+.text-container{
+  padding: 10px;
+}
+.text-container h1{
+  font-size: 26px;
+  text-align: left;
+}
+.underline{
+  border-top: 2px solid #1c325f;
+  width: 90%;
+  margin-top: 5px;
+}
+
+table{
+  width: 90%;
+  margin: 10px;
+}
+#action{
+  width: 50%;
+  margin: 0%;
+}
+
+.image-container{
+  text-align: center;
+}
+.image-container .img{
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+  border: 2px #1c325f solid;
+  border-radius: 50%;
+}
+.image-container h1{
+  font-size: 18px;
+  font-weight: 600;
+} */

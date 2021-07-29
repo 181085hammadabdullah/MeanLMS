@@ -1,0 +1,33 @@
+h1{
+  font-size: 24px;
+  text-align: left;
+  font-weight: bold;
+}
+.underline{
+  border-top: 2px solid rgb(5, 35, 168);
+  width: 80%;;
+}
+.support-card{
+  background-color: rgba(238, 235, 235, 0.849);
+  height: 500px;
+  width: 350px;
+  display: inline-block;
+  margin: 10px 10px;
+  border: 1px solid rgb(175, 175, 175);
+  border-radius: 1%;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+.support-card h1{
+  font-size: 20px;
+  padding: 20px;
+  font-weight: normal;
+  line-height: 12px;
+}
+.button{
+  line-height: 12px;
+}
+.link{
+  border-bottom: 1px solid rgb(221, 219, 219);
+  padding: 10px;
+}

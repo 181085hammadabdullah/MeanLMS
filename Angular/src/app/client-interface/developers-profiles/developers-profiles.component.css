@@ -1,0 +1,156 @@
+.text-container{
+  margin-top: -40px;
+}
+h4{
+  color: #183879 ;
+}
+
+.underline{
+  border-top: 2px solid #1c325f;
+}
+.links{
+  font-size: 18px;
+  /* padding: 10px; */
+  /* margin: 15px 0px; */
+  color: #1c325f;
+  float: right;
+}
+.links a{
+  text-decoration: none;
+  color: #1c325f;
+  padding: 0px 0px 5px 30px;
+}
+.body{
+  width: 100%;
+  height: auto;
+  /* background-color: rgba(1, 49, 139, 0.1); */
+  background-image: linear-gradient(to right, rgba(0, 89, 255, 0.1), rgba(1, 49, 139, 0.3), rgba(0, 89, 255, 0.1));
+  /* background-image: linear-gradient(to right, rgba(1, 49, 139, 0.1), rgba(153, 255, 0, 0.2)); */
+  /* margin: 5% 0%; */
+  border-radius: 20px;
+
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+  padding: 30px 20px 30px 20px;
+}
+.text-div
+{
+  float: left;
+}
+h4{
+  color: #1c325f;
+}
+.Learn{
+  padding: 20px 0px;
+}
+.side-left, .side-right{
+  /* border: #1c325f 1px solid; */
+  float: left;
+}
+.item-icon{
+  float: left;
+  color: rgb(0, 128, 53);
+}
+.item-text{
+  float: left;
+  font-size: 14px;
+}
+.Description{
+  padding: 10px 20px;
+}
+
+.image-div{
+  float: left;
+  /* height: auto; */
+  /* border: #1c325f 1px solid; */
+}
+.image-div-inside{
+  height: 100vh;
+  padding: 10px;
+  margin-left: 10px;
+  text-align: center;
+  border: 2px solid white;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.image-div img{
+  border-radius: 5px;
+  /* height: 90%; */
+  width: 100%;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.price{
+  color: rgb(0, 128, 53);
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.btn1{
+  width: 90%;
+  height: 50px;
+  font-size: 18px;
+  background-color: #1c325f;
+  border-radius: 5px;
+  color: white;
+  border: none;
+  outline: none;
+}
+.buy-content{
+  float: left;
+  padding: 0px 20px;
+}
+.buy-content .item1{
+  font-size: 18px;
+}
+.item1, .item {
+  text-align: left;
+}
+.item{
+  font-size: 15px;
+  line-height: 6px;
+}
+.icon{
+  padding: 0px 5px;
+}
+.icon1{
+  padding: 0px 9px;
+}
+
+
+.profile1{
+  background-color: #183879;
+  height: auto;
+  text-align: center;
+
+}
+.profile1-inner{
+  border-bottom: 1px solid white;
+}
+.profile2-inner{
+  border-bottom: 1px solid #183879;
+}
+.text-div{
+  text-align: left;
+}
+.profile2{
+  background-color: white;
+  height: auto;
+  text-align: center;
+}
+.img-div1 img{
+  width: 100px;
+  border-radius: 50%;
+  border: 1px white solid;
+  margin: 15px;
+}
+.img-div2 img{
+  width: 100px;
+  border-radius: 50%;
+  border: 1px #183879 solid;
+  margin: 15px;
+}
+hr.new2 {
+  border-top: 1px dashed white;
+}

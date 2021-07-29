@@ -1,0 +1,136 @@
+
+
+p{
+  color: white;
+}
+.r{
+  text-align: center;
+}
+.slide{
+  box-shadow: 10px 15px 20px -16px rgba(0, 0, 0, 0.459);
+}
+.slider-img{
+  width: 100%;
+  height: auto;
+  background-size: cover;
+}
+h1{
+  color: #0d43ad;
+}
+.intro-text{
+  font-size: 4rem;
+  text-transform: uppercase;
+  animation-name: fade;
+  animation-duration: 3s;
+}
+.slider-btn{
+  border-radius: 35px;
+  /* background-color: #0d43ad; */
+}
+.slider-btn:hover{
+  color: black;
+  background-color: #0d43ad;
+}
+.text2{
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.692);
+  animation-name: fade;
+  animation-duration: 3s;
+}
+.carousel-item{
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@keyframes fade {
+  from {opacity: .1; transform: translate(0,  20px); }
+  to {opacity: 1; transform: translate(0,  0px);}
+}
+@media (min-width: 1200px) {
+  .slider-img{
+    width: 100%;
+    height: auto;
+    background-size: cover;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .slider-img{
+    width: 100%;
+    height: auto;
+    background-size: cover;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+/* h1{
+  font-size: 0.5rem;
+} */
+.slider-img{
+  width: 100%;
+  height: auto;
+  background-size: cover;
+}
+.slide{
+  margin-top: 40px;
+}
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .slider-img{
+    width: 100%;
+    height: auto;
+    background-size: cover;
+  }
+  .intro-text{
+    font-size: 2rem;
+    text-transform: uppercase;
+    animation-name: fade;
+    animation-duration: 3s;
+  }
+  h1{
+  font-size: 1rem;
+}
+p{
+  font-size: 12px;
+}
+  .slide{
+    margin-top: 40px;
+  }
+  .slider-btn{
+    font-size: 12px;
+    padding: 5px;
+  }
+}
+@media (max-width: 575.98px) {
+  .slider-img{
+    width: 100%;
+    height: auto;
+    background-size: cover;
+  }
+  .intro-text{
+    font-size: 1rem;
+    text-transform: uppercase;
+    animation-name: fade;
+    animation-duration: 3s;
+    margin-top: 350px;
+  }
+  .text2{
+    padding: 5px;
+  }
+  h1{
+  font-size: 0.8rem;
+}
+p{
+  font-size: 8px;
+  line-height: 8px;
+  /* margin-bottom: -10px; */
+}
+  .slide{
+    margin-top: 50px;
+    /* height: 500px; */
+  }
+  .slider-btn{
+    font-size: 10px;
+    padding: 5px;
+    line-height: 10px;
+    margin-bottom: -10px;
+  }
+}

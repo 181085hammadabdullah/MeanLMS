@@ -1,0 +1,100 @@
+<div id="container">
+
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <div class="top-nav-container">
+
+          <div class="logo-container">
+              <div class="logo">
+                  <a class="navbar-brand" routerLink="/">
+                    <span><img src="assets/images/logo.png" id="logo"></span></a>
+              </div>
+          </div>
+        <div class="top-nav">
+          <nav>
+            <button class="navbar-toggler SideMenuToggler fa" type="button">
+              <span><fa name="bars" size="2x"></fa></span>
+            </button>
+            <div class="name-container">
+              <h1 style="font: 'poppin'; text-transform: capitalize; font-size: 24px">Admin Dashboard</h1>
+            </div>
+
+            <div class="student-name-container">
+              <img src="/assets/images/person-1.jpg" alt="">
+              <p>{{AdminName}}</p>
+
+              <div class="dropdown-content">
+                <a routerLink="/admin-dashboard/students" routerLinkActive="active">Students</a><br>
+                <a routerLink="/admin-dashboard/courses/all-courses" routerLinkActive="active">Courses</a><br>
+                <a routerLink="/admin-dashboard/admin-chat" routerLinkActive="active">Inbox</a><br>
+                <a (click)="Logout()">Logout</a>
+              </div>
+            </div>
+          </nav>
+
+          <div class="wrapper">
+
+            <div class="sidebar-wrapper">
+
+                <ul class="sidebar-nav">
+                  <!-- <div class="user-img"><img src="assets/images/person-1.jpg" alt="user-image" >
+                    <span><p style="color: white">Admin</p></span>
+                      </div> -->
+                      <!-- <hr> -->
+
+                  <li><a routerLink="/admin-dashboard" routerLinkActive="active" class="text">
+                    <span class="icon"><fa name="dashboard" size="2x"></fa></span>Dashboard</a></li>
+
+                    <li class="dropdown">
+                      <a [routerLink]="['/admin-dashboard/students']" routerLinkActive="active"  class="text" id="drop-header">
+                      <span class="icon"><fa name="users" size="2x"></fa></span>Students</a>
+                        <!-- <div class="dropdown-content">
+                          <a [routerLink]="['/admin-dashboard/students/approved']" routerLinkActive="router-link-active"  style="color: #0b41ad; font-size: 16px;">Registered</a>
+                          <a [routerLink]="['/admin-dashboard/students/pending']" routerLinkActive="router-link-active"  style="color: #0b41ad; font-size: 16px;">Pending</a>
+                        </div> -->
+                    </li>
+
+                    <!-- <li class="dropdown">
+                        <a routerLink="/admin" routerLinkActive="active"  class="text" id="drop-header">
+                        <span class="icon"><fa name="user-tie" size="2x"></fa></span>Instructors</a>
+                          <div class="dropdown-content">
+                            <a [routerLink]="['/admin/students/approved']" routerLinkActive="router-link-active"  style="color: #0b41ad; font-size: 16px;">Approved</a>
+                            <a [routerLink]="['/admin/students/pending']" routerLinkActive="router-link-active"  style="color: #0b41ad; font-size: 16px;">Pending</a>
+                          </div>
+                      </li> -->
+
+                      <li><a routerLink="/admin-dashboard/courses/all-courses" routerLinkActive="active"  class="text">
+                        <span class="icon"><fa name="book" size="2x"></fa></span>Courses</a></li>
+
+                  <li><a routerLink="/admin-dashboard/upload" routerLinkActive="active"  class="text">
+                    <span class="icon"><fa name="cloud-upload" size="2x"></fa></span>Upload</a></li>
+
+                  <li><a routerLink="/admin-dashboard/add-lectures" routerLinkActive="active"  class="text">
+                    <span class="icon"><fa name="clipboard" size="2x"></fa></span>Lectures</a></li>
+
+                  <li><a routerLink="/admin-dashboard/messages" routerLinkActive="active"  class="text">
+                    <span class="icon"><fa name="folder-open" size="2x"></fa></span>Messages</a></li>
+                </ul>
+
+            </div>
+
+            <div class="page-content-wrapper">
+              <div class="c">
+                <div class="ro">
+                  <div class="col-lg-12">
+                    <div class="content-container">
+
+
+                      <router-outlet></router-outlet>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+

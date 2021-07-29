@@ -1,0 +1,62 @@
+
+.content{
+  border: 1px solid rgb(209, 208, 208);
+  background-color: rgb(250, 246, 246);
+  height: auto;
+  padding-bottom: 20px;
+  float: left;
+  margin: 20px;
+  box-shadow: 3px 3px 30px 5px rgba(90, 90, 90, 0.041);
+}
+.content-heading{
+  width: 100%;
+  height: 50px;
+  background-color: #25385f;
+}
+.content h1{
+  font-size: 22px;
+  color: white;
+  padding: 5px;
+  font-weight: 500;
+}
+.content-text{
+  text-align: center;
+}
+.content-text-1{
+  display: inline-block;
+  width: 90%;
+  padding: 10px;
+  margin: 15px;
+  box-shadow: 3px 3px 10px 5px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgb(202, 202, 202);
+
+}
+.content-text-1 img{
+  width: 100px;
+  float: left;
+}
+.content-text-1 h1{
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 10px;
+  color: #25385f;
+  float: left;
+}
+.course-btn{
+  float: right;
+}
+.glow{
+  animation: glowing 0.8s infinite;
+  outline: none;
+}
+
+@keyframes glowing {
+  0% { background-color: #2a4b8f;  }
+  50% { background-color: #4a86ff; }
+  100% { background-color: #2a4b8f;}
+}
+.glow:hover{
+  animation: none;
+  background-color: rgb(89, 255, 47);
+  color: #25385f;
+}
